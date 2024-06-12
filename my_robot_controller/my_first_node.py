@@ -7,6 +7,9 @@ class MyNode(Node):
     """
     Summary : Node for the testing ROS Node creation
     """
+
+    counter = 0
+
     def __init__(self):
         """
         Class Constructor
@@ -26,7 +29,8 @@ class MyNode(Node):
         Returns:
             None
         """
-        self.get_logger().info("Hello ROS2")
+        self.get_logger().info("Hello ROS2 " + str(self.counter))
+        self.counter += 1
 
 
 def main(args=None):
